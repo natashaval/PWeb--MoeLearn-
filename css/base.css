@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* Header Menu */
+.nav {
+    clear: both;
+    height: 1em;
+}
+.logo {
+    height: 40px;
+    width: 140px;
+    background-color: white;
+    display:inline-block;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #333;
+    width: 100%;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a.active {
+    background-color: green;
+}
+
+nav li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+nav li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*gif chara footer*/
+.gifchara {
+    clear: both;
+}
+
+#mirai {
+    width: 120px;
+    height: 120px;
+    margin: 0px 0px 0px 70px;
+    display: inline-block;
+    background-image: url('../images/gifmiraiwalking.gif');
+    background-size: contain;
+}
+#mirai:hover {
+    background-image: url('../images/gifmirai.gif');
+}
+
+#eiji {
+    width: 120px; 
+    height: 120px;
+    display: inline-block;
+    background-image: url('../images/gifeijiwalking.gif');
+    background-size: contain;
+}
+#eiji:hover {
+    background-image: url('../images/gifeiji.gif');
+}
+
+#haruka {
+    width: 120px; 
+    height: 120px;
+    display: inline-block;
+    background-image: url('../images/gifharukawalking.gif');
+    background-size: contain;
+}
+#haruka:hover {
+    background-image: url('../images/gifharuka.gif');
+}
+
+#kanata {
+    width: 120px; 
+    height: 120px;
+    display: inline-block;
+    background-image: url('../images/gifkanatawalking.gif');
+    background-size: contain;
+}
+#kanata:hover {
+    background-image: url('../images/gifkanata.gif');
+}
+
+#chitose {
+    width: 120px; 
+    height: 120px;
+    display: inline-block;
+    background-image: url('../images/gifchitosewalking.gif');
+    background-size: contain;
+}
+#chitose:hover {
+    background-image: url('../images/gifchitose.gif');
+}
+
+#kizuna {
+    width: 120px; 
+    height: 120px;
+    display: inline-block;
+    background-image: url('../images/gifkizunawalking.gif');
+    background-size: contain;
+}
+#kizuna:hover {
+    background-image: url('../images/gifkizuna.gif');
+}
+
+#retrokyuu {
+    width: 120px; 
+    height: 120px;
+    display: inline-block;
+    background-image: url('../images/gifretrokyuuwalking.gif');
+    background-size: contain;
+}
+#retrokyuu:hover {
+    background-image: url('../images/gifretrokyuu.gif');
+}
+
+
+/* Footer menu*/
+footer {
+    font-family: monospace;
+    font-size: 12px;
+}
+
+/* Create two unequal columns that floats next to each other */
+footer .column {
+    float: left;
+    padding: 0px 10px;
+}
+
+footer .left {
+  width: 60%;
+}
+
+footer .right {
+  width: 40%;
+}
+
+/* Clear floats after the columns */
+footer .row:after {
+    display: table;
+    clear: both;
+}
+
+
+
+.lorem {
+    font-size: 24px;
+}

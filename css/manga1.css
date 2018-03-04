@@ -1,0 +1,51 @@
+/*https://www.queness.com/post/256/vertical-scroll-menu-with-jquery-tutorial*/
+
+.manga-sidenav{
+	display: table-cell;
+	width: 20%;
+	height: inherit;
+	left: 0;
+	background-color: blue;
+	display: block;
+	float: left;
+	overflow-y: scroll;
+	position: inherit;
+}
+
+.header-menu {
+	width: 60%;
+	margin: 20px 50px;
+	display: block;
+}
+
+.manga-content {
+	margin-left: 20%;
+	background-color: darkblue;
+	width: 80%;
+	height: 50em;
+}
+
+.manga {
+	height: 50em;
+	padding: 20px;
+	overflow: hidden;
+	float: left;
+}
+
+
+#manga-mirai {
+	padding: 0 20px 0 10px;
+	text-align: justify;
+	font-size: 16px;
+	color: white;
+}
+
+.kanji-list {
+	list-style: none;
+}
+
+.kanji-list li:before {
+	content: "▪ ";
+	padding-right: 8px;
+	color: orange;
+}
