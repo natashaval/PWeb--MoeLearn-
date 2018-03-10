@@ -1,0 +1,31 @@
+
+.moekana-row {
+  display: flex;
+  width: 100%;
+}
+
+.moekana-column {
+  flex: 50%;
+  max-height: 500px;
+  overflow: hidden;
+}
+.moekana-images {
+    transform: translate(-20%, 0);
+    object-fit: cover;
+}
+
+.left {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+.right {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
