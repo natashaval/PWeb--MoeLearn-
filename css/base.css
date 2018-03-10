@@ -4,9 +4,9 @@
 }
 
 /* Header Menu */
-.nav {
+nav {
     clear: both;
-    height: 1em;
+    height: 3em;
 }
 .logo {
     height: 40px;
@@ -25,6 +25,8 @@ nav ul {
     padding: 0;
     top: 0;
     left: 0;
+    height: inherit;
+    z-index: 100;
 }
 
 nav li {
@@ -78,12 +80,13 @@ nav li.dropdown {
 /*gif chara footer*/
 .gifchara {
     clear: both;
+    display: flex;
+    justify-content: space-around;
 }
 
 #mirai {
     width: 120px;
     height: 120px;
-    margin: 0px 0px 0px 70px;
     display: inline-block;
     background-image: url('../images/gifmiraiwalking.gif');
     background-size: contain;
@@ -160,12 +163,12 @@ nav li.dropdown {
 
 
 /* Footer menu*/
-footer {
+footer p{
     font-family: monospace;
     font-size: 12px;
 }
 
-/* Create two unequal columns that floats next to each other */
+/* Create two unequal columns that floats next to each other
 footer .column {
     float: left;
     padding: 0px 10px;
@@ -179,14 +182,42 @@ footer .right {
   width: 40%;
 }
 
-/* Clear floats after the columns */
+/* Clear floats after the columns 
 footer .row:after {
     display: table;
     clear: both;
 }
+*/
 
+footer {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto auto;
+    margin: 5px 0px;
+}
 
+footer .left {
+    background-color: #aaa;
+    padding-left: 10px;
+}
 
-.lorem {
-    font-size: 24px;
+footer .right {
+    display: inline-block;
+    background-color: #bbb;
+    text-align: center;
+}
+
+footer .socmedlink {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 20%;
+}
+
+footer .socmedlink img {
+    filter: grayscale(90%);
+}
+
+footer .socmedlink img:hover {
+    filter: grayscale(0%);
+    filter: brightness(110%);
 }

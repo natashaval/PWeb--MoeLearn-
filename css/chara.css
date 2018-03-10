@@ -1,0 +1,81 @@
+.container {
+	display: grid;
+	grid-template-columns: repeat(7,1fr);
+	grid-template-rows: auto auto auto auto;
+	grid-gap: 10px;
+}
+
+.container div {
+  text-align: center;
+}
+
+.container .container-header {
+	grid-column: 1 / span 7;
+}
+
+.item {
+	border-color: #ffbc40;
+	border-width: 3px;
+	border-style: outset;
+	border-radius: 75px;
+}
+
+.item:hover {
+	box-shadow: 5px 10px 18px #ccc;
+	border-style: inset;
+}
+
+.container .container-characters {
+	grid-column: 1 / span 7;
+}
+
+.container .characters-nav {
+	overflow: hidden;
+}
+
+.container .header-images {
+	width: 60%;
+	height: auto;
+}
+
+.container .nav-images {
+	width: calc(100% / 6);
+	height: auto;
+	object-fit: cover;
+}
+
+.container .content-images {
+	width: 60%;
+	height: auto;
+	margin: 10px 0px;
+}
+
+.container .container-profile {
+	grid-column: 2 / span 5;
+}
+
+.container .content-title {
+	font-size: 20px;
+	font-family: 'Courier New';
+	padding: 10px 0px;
+	font-weight: bold;
+}
+
+.container-profile .content-profile {
+	margin-left: 8%;
+	text-align: justify;
+	max-width: 85%;
+}
+
+.container-profile .profile{
+	color: white;
+	background-color: #FFA500;
+	transition-duration: 0.3s;
+	padding: 12px 10px;
+	border-radius: 10px;
+}
+
+.container-profile .profile:hover{
+	box-shadow: 10px 10px 10px 0px #888888;
+	font-weight: bold;
+}

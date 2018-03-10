@@ -29,6 +29,10 @@
 	transition: 0.5s;
 }
 
+img.header-menu {
+	border-style: ridge;
+}
+
 img.header-menu:hover {
 	box-shadow: 3px 3px 5px #999;
 }

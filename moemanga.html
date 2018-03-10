@@ -1,233 +1,181 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="css/base.css">
-	<link rel="stylesheet" type="text/css" href="css/manga1.css">
-	<title>MoeMoe</title>
-	<link rel="icon" href="images/retrokyuu.ico" type="image/x-icon">
-	<!--script src="js/manga.js"></script-->
-</head>
-<body>
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/front.css">
+		<title>MoeMoe</title>
+		<link rel="icon" href="images/retrokyuu.ico" type="image/x-icon">
+	</head>
+	<body>
 
-	<nav>
-		<ul>
-			<li><img alt="Logo" src="images/moekanalogo.png" class="logo"></li>
+		<nav>
+			<ul>
+				<li><img alt="Logo" src="images/moekanalogo.png" class="logo"></li>
 
-			<li><a href="index.html">Home</a></li>
-			<li class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn active">MoeLearn</a>
-				<div class="dropdown-content">
-					<a href="moekana.html">Moekana</a>
-					<a href="moekanji.html">Moekanji</a>
-					<a href="moemanga.html" class="active">Moemanga</a>
-					<a href="moeplay.html">MoePlay! &hearts;</a>
-				</div>
-			</li>
-			<li><a href="characters.html">Characters</a></li>
-			<li><a href="gallery.html">Gallery</a></li>
-			<li hidden><a href="shop.html">Shop</a></li>
-			<li><a href="about.html">About</a></li>
-			<li style="float:right" hidden><a href="login.html">Login</a></li>
-			<li style="float:right" hidden><a href="register.html">Register</a></li>
-		</ul>
-	</nav>
-<!--
-<h1>Click on the buttons inside the tabbed menu:</h1>
-<div class="tab">
-	<button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
-	<button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-	<button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-</div>
+				<li><a href="index.html" class="">Home</a></li>
+				<li class="dropdown">
+					<a href="javascript:void(0)" class="dropbtn active">MoeLearn  &#9662;</a>
+					<div class="dropdown-content">
+						<a href="moekana.html">Moekana</a>
+						<a href="moekanji.html">Moekanji</a>
+						<a href="moemanga.html" class="active">Moemanga</a>
+						<a href="moeplay.html">MoePlay! &hearts;</a>
+					</div>
+				</li>
+				<li><a href="4koma.html">MoeSensei</a></li>
+				<li><a href="characters.html">Characters</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li hidden><a href="shop.html">Shop</a></li>
+				<li style="float:right" hidden><a href="login.html">Login</a></li>
+				<li style="float:right" hidden><a href="register.html">Register</a></li>
+			</ul>
+		</nav>
 
-<div id="London" class="tabcontent">
-	<h3>London</h3>
-	<p>London is the capital city of England.</p>
-</div>
+		<div class="article">
+			<p class="article-title">Introducing Moemanga</p>
+			<img src="http://images.dannychoo.com/cgm/images/post/20131012/27075/177406/large/3cfa833e78f58e4c7023239779952c5f.jpg" class="article-header" alt="moemanga header">
+			<p class="article-sub">What is Moemanga?</p>
+			<p>
+				<a href="4koma.html">MoeManga</a> features the slice of life antics of the Mirai Millennium <a href="characters.html">characters</a> with Mirai Suenaga as the heroine of the story.
 
-<div id="Paris" class="tabcontent">
-	<h3>Paris</h3>
-	<p>Paris is the capital of France.</p> 
-</div>
+				The free-to-view MoeManga will be released periodically in both Japanese and English at <a href="4koma.html">MoeSensei</a>.
 
-<div id="Tokyo" class="tabcontent">
-	<h3>Tokyo</h3>
-	<p>Tokyo is the capital of Japan.</p>
-	<img alt="kanatamanga" src="images/kanatamoe.jpg" style="width: 80%">
-</div>
+				MoeManga includes definitions and usage of key Japanese words that were used in the 4koma which are broken down and explained in English. Each strip introduces a wide variety of Japanese words and expressions used in everyday life which are great for beginners and intermediate Japanese learners alike.<br>
+			</p>
+			<img src="http://images.dannychoo.com/cgm/images/post/20131012/27075/177541/large/eac1cf6b9f36bb7372845fa43df299b5.jpg" class="article-images">
+			<p class="article-sub">What is 4Koma?</p>
+			<p>
+				4koma (read as "yonkoma") are comic strips that are restricted to only 4 panels, and typically meant to be humorous. <br>
 
-<script>
-	// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
--->
-<script type="text/javascript" src="js/mangalist.js"></script>
-<div class="manga-main" style="height: 50em; clear: both; margin-top: 45px;">
-	<div class="manga-sidenav" id="navbar">
-		<button onclick="openManga(event, 'manga-mirai')" id="defaultOpen"><img alt="headermirai" src="images/moeha.jpg" class="header-menu"></button>
-		<button onclick="openManga(event, 'manga-haruka')"><img alt="headerharuka" src="images/moehb.jpg" class="header-menu"></button>
-		<button onclick="openManga(event, 'manga-kanata')"><img alt="headerkanata" src="images/moehc.jpg" class="header-menu"></button>
-		<button onclick="openManga(event, 'manga-eiji')"><img alt="headereiji" src="images/moehd.jpg" class="header-menu"></button>
-		<button onclick="openManga(event, 'manga-retrokyuu')"><img alt="headerretrokyuu" src="images/moehe.jpg" class="header-menu"></button>
-		<button onclick="openManga(event, 'manga-kizuna')"><img alt="headerkizuna" src="images/moehf.jpg" class="header-menu"></button>
-<!--			<img alt="headerkizuna" src="images/moehf.jpg" class="header-menu">
-		<img alt="headerkizuna" src="images/moehf.jpg" class="header-menu">
-		<img alt="headerkizuna" src="images/moehf.jpg" class="header-menu">
-	-->	
+				Traditionally, Yonkoma follow a structure known as Kishōtenketsu [起承転結]. This word is a compound formed from the following Japanese Kanji characters:<br>
+				<ul>
+					<li>起(ki): The first panel forms the basis of the story; it sets the scene.</li>
+					<li>承(sho): The second panel develops upon the foundation of the story laid down in the first panel.</li>
+					<li>転(ten) : The third panel is the climax, in which an unforeseen development occurs.</li>
+					<li>結(ketsu): The fourth panel is the conclusion, in which the effects of the third panel are seen. This is also called the Ochi.</li>
+				</ul>
+				- from <a href="https://en.wikipedia.org/wiki/Yonkoma" target="_blank">Wikipedia</a>
+				</p>
+				<p class="article-sub">Be A Part of MoeManga</p>
+				<p>
+					<strong>MoeManga is written by you!</strong><br>
+					<p>If you are interested in having your 4koma ideas illustrated by <a href="https://twitter.com/#!/ikkyu019" target="_blank">Ikkyuu-sensei</a> and possibly featured in future publications, just fill up the form below with your idea and you're all set. Make sure to feature the mascot <a href="characters.html">characters</a> of Culture Japan and Mirai Millennium. If your idea is selected for the 4koma adaptation, you will be paid some coffee money so you can relax at a cafe and think of more awesome ideas ^^;</p>
+					<img src="http://images.dannychoo.com/cgm/images/post/20131012/27075/177676/large/c9f3bbf501c6eea1f56652951f116fa0.jpg" class="article-images">
+				</p>
+				<p class="article-sub">Before Submitting Anything, Please Read</p>
+				<p>
+					<ul>
+						<li>You can submit as many ideas as you want whenever you want.</li>
+						<li>All submitted ideas are usually tweaked by myself for various reasons including making the idea more interesting or space restrictions in each panel.</li>
+						<li>4koma writers will be paid 10 USD by paypal for each idea that is used - you pay the paypal fee though. For example, if you end up submitting 100 ideas that get used then you get paid 1000 USD.</li>
+						<li>If a few writers submitted similar 4koma then the first writer that submitted will be chosen.</li>
+						<li>You will be credited as the writer of each 4koma in the body of text which accompanies each MoeManga episode.</li>
+						<li>Do make sure that the ideas are yours and yours alone - don't copy them from anywhere!</li>
+						<li>If you are worried that your 4koma ideas will be stolen by me then save yourself that worry and don't submit anything ^o^</li>
+					</ul>
+				</p>
+				<p class="article-sub">How To Fill Out The Form</p>
+				<p>
+					<p>For each panel you should generally write something like:-</p>
+					<blockquote>Mirai: (In bikini on the beach) "its a nice day!"<br>
+					Eiji: (in shorts peeks from behind a palm tree with nose bleeding</blockquote>
+					and for the second panel...
+					<blockquote>Haruka: "Mirai-onee-chan! Look out there is a hentai!"<br>Mirai "Whaaa?!"</blockquote>
+				</p>
 
-</div>
-<!--div class="manga-content"-->
-<div id="manga-mirai" class="manga-content">
-	<img alt="mirai4koma" src="images/miraimoe.jpg" class="manga">
-	<br>
-	<p class="manga-title">MOEMANGA JAPANESE LEARNING</p>
-	<ul class="kanji-list">
-		<li><strong>ぴちぴち</strong> [pichi pichi] - young and lively.</li>
-		<li><strong>高校2年生</strong> [こうこうにねんせい (koukou ninensei)] - second grade of high school or 11th grade.</li>
-		<li><strong>戦う</strong> [たたかう (tatakau)] - to battle or fight.</li>
-		<li><strong>~こと~</strong> [koto] - means "also known as".</li>
-		<li><strong>優しい</strong> [やさしい (yasashii)] - kind and generous.</li>
-		<li><strong>しっかり者 </strong>[しっかりもの (shikkari mono)] - a responsible person.</li>
-		<li><strong>みんなに好かれる</strong> [みんなにすかれる (minnani sukareru)] - to be liked by all.</li>
-		<li><strong>よ</strong>く [yoku] - often.</li>
-		<li><strong>おっぱい</strong> [oppai] - women's chest.</li>
-		<li><strong>いじられる</strong> [ijirareru] - to be made fun of.</li>
+				<form action="">
+					<h2>Submit Your 4Koma Ideas</h2>
+					<fieldset>
+						<legend>Author Identity: </legend>
+						<label class="question1">Your Name</label><br>
+						<label class="question2">It can be a pen name too that appears below the MoeManga</label><br>
+						<input type="text" name="usrname"><br>
+						<label class="question1">Your Gender</label><br>
+						<label class="question2">It specify your gender, or you can leave it blank</label><br>
+							<input type="radio" name="gender" value="male">Male &#9794;<br>
+							<input type="radio" name="gender" value="female">Female &#9792;<br>
+							<input type="radio" name="gender" value="other">Other<br>
+						<label class="question1">Your Continent</label><br>
+						<label class="question2">It is the continent you come from</label><br>
+						<select name="continent">
+							<option value="Asia">Asia</option>
+							<option value="Africa">Africa</option>
+							<option value="North America">North America</option>
+							<option value="South America">South America</option>
+							<option value="Europe">Europe</option>
+							<option value="Australia">Australia</option>
+						</select><br>
+						<label class="question1">Website URL</label><br>
+						<label class="question2">URL you would like us to link to in the credits</label><br>
+						<input type="url" name="usrurl"><br>
+						<label class="question1">E-mail Address</label><br>
+						<label class="question2">For us to contact you if your idea was chosen</label><br>
+						<input type="email" name="usremail"><br>
+					</fieldset>
+					<fieldset>
+						<legend>4Koma Ideas: </legend>
+						<label class="question1">4koma Title</label><br>
+						<input type="text" name="title"><br>
+						<label class="question1">1st koma</label><br>
+						<label class="question2">起(ki): The first panel forms the basis of the story; it sets the scene.</label><br>
+						<input type="textarea" name="firstkoma"><br>
 
-	</ul>
-	<br><p style="text-align: center;"><a href="http://www.dannychoo.com/en/post/27074/MoeManga+00A+Mirai+Suenaga.html" target="_blank">Learn More</a></p>
-</div>
+						<label class="question1">2nd koma</label><br>
+						<label class="question2">承(sho): The second panel develops upon the foundation of the story laid down in the first panel.</label><br>
+						<input type="textarea" name="secondkoma"><br>
 
-<div id="manga-haruka" class="manga-content">
-	<img alt="haruka4koma" src="images/harukamoe.jpg" class="manga">
-	<br>
-	<p class="manga-title">MOEMANGA JAPANESE LEARNING</p>
-	<ul class="kanji-list">
-		<li><strong>妹</strong> [いもうと (imouto)] - younger sister. When referring to sisters, you would write it out as "~姉妹".</li>
-		<li><strong>彼女</strong> [かのじょ (kanojo)] - she/her. It can also refer to one's girlfriend.</li>
-		<li><strong>責任感</strong> [せきにんかん (sekininnkan)] - a sense of responsibility. </li>
-		<li><strong>強</strong>く [つよく (tsuyoku)] - to be strong.</li>
-		<li><strong>成績</strong> [せいせき (seiseki)] - grades/performance/result.</li>
-		<li><strong>だが</strong> [daga] - a sentence connector that means "but", "however" or "nevertheless".</li>
-		<li><strong>的外れ</strong> [まとはずれ (matohazure)] - to be off track/point.</li>
-		<li><strong>多い</strong> [おおい (ooi)] - to be in abundance.</li>
-		<li><strong>いたずらっ子</strong> [いたずらっこ (itazurakko)] - a prankster.</li>
-		<li><strong>~でもある</strong> [~demoaru] - to also be something.</li>
-	</ul>
-	<br><p style="text-align: center;"><a href="http://www.dannychoo.com/en/post/27076/MoeManga+00B+Haruka+Suenaga.html" target="_blank">Learn More</a></p>
-</div>
+						<label class="question1">3rd koma</label><br>
+						<label class="question2">転(ten) : The third panel is the climax, in which an unforeseen development occurs.</label><br>
+						<input type="textarea" name="thirdkoma"><br>
 
-<div id="manga-kanata" class="manga-content">
-	<img alt="kanata4koma" src="images/kanatamoe.jpg" class="manga">
-	<br>
-	<p class="manga-title">MOEMANGA JAPANESE LEARNING</p>
-	<ul class="kanji-list">
-		<li><strong>ひとつ上</strong> [ひとつうえ (hitotsu-ue)] - someone who is 1 year older. Often used when describing the person's age. When referring to someone younger, you would change "上" [うえ (ue)] to "下" [した(shita)].</li>
-		<li><strong>先輩</strong> [せんぱい (senpai)] - a senior or a superior at work or school. A junior on the other hand is called "後輩" [こうはい (kouhai)].</li>
-		<li><strong>ディレクター</strong> [でぃれくたー (direcutar)] - the director.</li>
-		<li><strong>担当</strong> [たんとう (tanntou)] - the manager.</li>
-		<li><strong>厳し</strong>く [きびしく (kibishiku)] - to be strict/severe.</li>
-		<li><strong>指導 </strong>[しどう (shidou)] - to advise/coach/lead/guide.</li>
-		<li><strong>心優しい一面</strong> [こころ やさしい いちめん (kokoro yasashii ichimen)] - a kind or compassionate side.</li>
-		<li><strong>知っている</strong> [しっている (shitteiru)] - to know/understand/realize.</li>
-	</ul>
-	<br><p style="text-align: center;"><a href="http://www.dannychoo.com/en/post/27080/MoeManga+00C+Kanata+Hoshikawa.html" target="_blank">Learn More</a></p>
-</div>
+						<label class="question1">4rd koma</label><br>
+						<label class="question2">結(ketsu): The fourth panel is the conclusion, in which the effects of the third panel are seen.</label><br>
+						<input type="textarea" name="fourthkoma"><br>
 
-<div id="manga-eiji" class="manga-content">
-	<img alt="eiji4koma" src="images/eijimoe.jpg" class="manga">
-	<br>
-	<p class="manga-title">MOEMANGA JAPANESE LEARNING</p>
-	<ul class="kanji-list">
-		<li><strong>同じ</strong> [おなじ (onaji)] - same/similar.</li>
-		<li><strong>三年生</strong> [さんねんせい (sannen-sei)] - third grade student. In Japanese high school, seniors are called third grade students.</li>
-		<li><strong>天才</strong> [てんさい (tensai)] - genius/gifted.</li>
-		<li><strong>メカニック</strong> [めかにっく (meka nikku)] - the mechanic.</li>
-		<li><strong>どんなに~でも</strong> [don nani ~ demo] - no matter what/how. "Don na" is usually followed by an adjective or verb. </li>
-		<li><strong>仕事</strong> [しごと (shigoto)] - work/occupation/business.</li>
-		<li><strong>大変</strong> [たいへん (tai hen)] - difficult. </li>
-		<li><strong>楽観的</strong> [らっかんてき (rakkann-teki)] - optimistic. Its antonym "pessimistic" is "悲観的" [ひかんてき (hikan-teki)].</li>
-		<li><strong>こなす</strong> [konasu] - to overcome/finish/to have a good command of something.</li>
-		<li><strong>オタク</strong> [おたく (otaku)] - otaku/geek/nerd/enthusiast.</li>
-		<li><strong>度</strong> [ど (do)] - level/strength/temperature.</li>
+						<label class="question1">Remarks</label><br>
+						<label class="question2">If you have images that help illustrate your idea, you can include it here.</label><br>
+						<input type="file" name="img"><br><br>
 
-	</ul>
-	<br><p style="text-align: center;"><a href="http://www.dannychoo.com/en/post/27081/MoeManga+00D+Eiji+Seiun.html" target="_blank">Learn More</a></p>
-</div>
+						<input type="reset" value="&#8634; Reset">
+						<input type="submit" value="&#10148; Submit">
 
-<div id="manga-retrokyuu" class="manga-content">
-	<img alt="retrokyuu4koma" src="images/retrokyuumoe.jpg" class="manga">
-	<br>
-	<p class="manga-title">MOEMANGA JAPANESE LEARNING</p>
-	<ul class="kanji-list">
-		<li><strong>球体型</strong> [きゅうたいがた (kyutai-gata)] - spherical.</li>
-		<li><strong>世界中</strong>[せかいじゅう (sekai-jyu)] - all over the world/worldwide.</li>
-		<li><strong>ネットワーク</strong> [ねっとわーく (netto-waaku)] - network.</li>
-		<li><strong>繋がっていて</strong> [つながっていて (tsunagatte ite)] - to be connected. The plain verb is “繋がる” [つながる (tsunagaru)].</li>
-		<li><strong>膨大</strong> [ぼうだい (boudai)] - a vast/immense amount of something.</li>
-		<li><strong>アクセス</strong> [あくせす (akusesu)] - to access/connect.</li>
-		<li><strong>ピンチ</strong> [ぴんち (pinchi)] - a crisis/pinch/trouble.</li>
-		<li><strong>変形</strong> [へんけい (henkei)] - to transform.</li>
-		<li><strong>いつも</strong> [itsumo] - always.</li>
-		<li><strong>一緒</strong> [いっしょ (issho)] - to be together.</li>
-		<li><strong>幸せ</strong> [しあわせ (shiawase)] - happy/lucky.</li>
-	</ul>
-	<br><p style="text-align: center;"><a href="http://www.dannychoo.com/en/post/27105/MoeManga+00E+Retrokyu.html" target="_blank">Learn More</a></p>
-</div>
+					</fieldset>
+				</form>
 
-<div id="manga-kizuna" class="manga-content">
-	<img alt="kizuna4koma" src="images/kizunamoe.jpg" class="manga">
-	<br>
-	<p class="manga-title">MOEMANGA JAPANESE LEARNING</p>
-	<ul class="kanji-list">
-		<li><strong>友達</strong> [ともだち (tomodachi)] - friend.</li>
-		<li><strong>ライバル </strong>[raibaru] - rival.</li>
-		<li><strong>新た・新しい</strong> [あらた・あたらしい (arata・atarashii)] - new.</li>
-		<li><strong>党首</strong> [とうしゅ (toushu)] - leader. usually used to refer to leaders of political parties or activist groups.</li>
-		<li><strong>校内</strong> [こうない (kounai)] - within the school.</li>
-		<li><strong>唯一</strong> [ゆいつ (yuitsu)] - one and only.</li>
-		<li><strong>お嬢様</strong> [おじょうさま (ojousama)] - princess.</li>
-		<li><strong>存在</strong> [そんざい (sonzai)] - presence/existence.</li>
-		<li><strong>憧れ</strong> [あこがれ (akogare)] - adoration/admiration</li>
-		<li><strong>本当</strong> [ほんとう (hontou)] - truth/reality</li>
-		<li><strong>普通</strong> [ふつう (futsuu)] - usual/common/ordinary</li>
-	</ul>
-	<br><p style="text-align: center;"><a href="http://www.dannychoo.com/en/post/27223/MoeManga+00F+Kizuna+Yumeno.html" target="_blank">Learn More</a></p>
-</div>
 
-<script>
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-</div>
+					</div>
 
-</div>
+					<div class="gifchara">
+						<a href="characters.html" id="mirai"></a>
+						<a href="characters.html" id="haruka"></a>
+						<a href="characters.html" id="kanata"></a>
+						<a href="characters.html" id="kizuna"></a>
+						<a href="characters.html" id="chitose"></a>
+						<a href="characters.html" id="eiji"></a>
+						<a href="characters.html" id="retrokyuu"></a>
+					</div>
 
-<div class="gifchara">
-	<a href="cmirai.html" id="mirai"></a>
-	<a href="charuka.html" id="haruka"></a>
-	<a href="ckanata.html" id="kanata"></a>
-	<a href="ckizuna.html" id="kizuna"></a>
-	<a href="cchitose.html" id="chitose"></a>
-	<a href="ceiji.html" id="eiji"></a>
-	<a href="cretrokyuu.html" id="retrokyuu"></a>
-</div>
+				</body>
 
-</body>
+				<footer>
+					<div class="left">
+						<p>Designed by Natasha Valentina. Based on Danny Choo Culture Japan Mascots. </p>
+						<div>
+							<a href="http://dannychoo.com" target="_blank"><img src="images/dannychoolink.jpg" style="height: 1.75em; width: auto;"></a>
+						</div>
+					</div>
+					<div class="right">
+						<p>Stay Connected</p>
+						<div class="socmedlink">
+							<a href="http://www.dannychoo.tumblr.com" target="_blank"><img src="images/ico/tumblr.jpg"></a>
+							<a href="http://www.pinterest.com/miraisuenaga" target="_blank"> <img src="images/ico/pinterest.jpg"></a>
+							<a href="http://www.instagram.com/dannychoo" target="_blank"><img src="images/ico/instagram.jpg"></a>
+							<a href="http://www.youtube.com/user/tokyostormtrooper" target="_blank"><img src="images/ico/youtube.jpg"></a>
+							<a href="http://www.facebook.com/dannychoodotcom" target="_blank"><img src="images/ico/facebook.jpg"></a>
+							<a href="http://www.plus.google.com/+DannyChoo" target="_blank"><img src="images/ico/googleplus.jpg"></a>
+							<a href="http://www.twitter.com/dannychoo" target="_blank"><img src="images/ico/twitter.jpg"></a>
+						</div>
+					</div>
+				</footer>
 
-<footer>
-	<div class="row">
-		<div class="column left" style="background-color:#aaa;">
-			<p>Designed by Natasha Valentina. Based on Danny Choo Culture Japan Mascots. </p>
-		</div>
-		<div class="column right" style="background-color:#bbb">
-			<p>Stay Connected</p>
-			<a href="twitter.com/dannychoo" id="twitter"></a>
-			<a href="facebook.com/dannychoodotcom" id="facebook"></a>
-			<a href="instagram.com/dannychoo" id="instagram"></a>
-			<a href="www.pinterest.com/miraisuenaga" id="pinterest"></a>
-			<a href="youtube.com/user/tokyostormtrooper" id="youtube"></a>
-			<a href="dannychoo.tumblr.com" id="tumblr"></a>
-			<a href="plus.google.com/+DannyChoo" id="googleplus"></a>
-		</div>
-	</div>
-</footer>
-</html>
+				</html>
