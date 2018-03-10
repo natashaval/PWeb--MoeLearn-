@@ -168,41 +168,21 @@ footer p{
     font-size: 12px;
 }
 
-/* Create two unequal columns that floats next to each other
-footer .column {
-    float: left;
-    padding: 0px 10px;
-}
-
-footer .left {
-  width: 60%;
-}
-
-footer .right {
-  width: 40%;
-}
-
-/* Clear floats after the columns 
-footer .row:after {
-    display: table;
-    clear: both;
-}
-*/
-
-footer {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: auto auto;
+ffooter {
+   display: flex;
     margin: 5px 0px;
 }
 
 footer .left {
+  width: 60%;
+  position: relative;
     background-color: #aaa;
     padding-left: 10px;
 }
 
 footer .right {
-    display: inline-block;
+    width: 40%;
+  position: relative;
     background-color: #bbb;
     text-align: center;
 }
