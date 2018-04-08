@@ -8,7 +8,9 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
-	<link rel="stylesheet" type="text/css" href="css/gallery.css">
+	<link rel="stylesheet" type="text/css" href="css/article.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link href="https://fonts.googleapis.com/css?family=Bad+Script|Poiret+One|Raleway|Nanum+Pen+Script" rel="stylesheet">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<title>MoeMoe</title>
 	<link rel="icon" href="images/retrokyuu.ico" type="image/x-icon">
@@ -34,17 +36,18 @@
 	?>
 
 	<div class="shop">
-		<div class="shop-header">
+		<div class="shop-header" style="text-align: center;">
 			<img src="images/shopheader.jpg"><br>
 		</div>
 		<div class="shop-content">
-			<form method="POST" action="createitem.php" method="POST" enctype="multipart/form-data">
+			<?php if(isset($_SESSION['user']) && ($_SESSION['user']['user_type'] == 1)) {
+			echo '<form method="POST" action="createitem.php" method="POST" enctype="multipart/form-data">
 				<div class="login-top">
 					<p class="form-title">Add Item</p>
 				</div>
 				<div class="login-content">
 					<input onchange="readURL(this);" type="file" name="itemimg" /><br>
-      <img id="test" src="#" style="width: 20%;" /><br>
+      <img id="test" src="#" style="width: 40%;" /><br>
 					<label class="question1">Item Name</label><br>
 				<input type="text" name="itemname"><br>
 				<label class="question1">Item Release Date</label><br>
@@ -56,9 +59,11 @@
 				</div>
 				<div class="login-bottom">
 					<input type="submit" name="itemadd_btn" value="Add Item">
-					<a href="shop.php">Back to Item Menu</a>
+					<br><br><a href="shop.php">Back to Item Menu</a>
 				</div>
-			</form>
+			</form>';
+			} ?>
+			<?php if(isset($_SESSION['user']) && ($_SESSION['user']['user_type'] == 0)) {echo '<img src="images/403-error.png">';}?>
 			</div>
 	</div>
 

@@ -36,12 +36,12 @@ nav li {
     float: left;
 }
 
-nav li a.active {
+nav li > a.active {
     background-color: #FFAD33;
     color: #FFFFFF;
 }
 
-nav li a {
+nav li > a {
     display: inline-block;
     color: #000000;
     text-align: center;

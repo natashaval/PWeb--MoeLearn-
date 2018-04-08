@@ -16,24 +16,24 @@ $noget = $_GET["edit"];
 		$query = "SELECT * FROM moeshop";
 		$result = mysqli_query($db, $query);
 		while ($row = mysqli_fetch_assoc($result)){
-			echo '<div>';
+			echo '<div class="card">';
 			echo '<img src="' .$row['item_imgpath']. '"/>';
 			//echo '<img src="$row['item_imgpath']">';
-			echo "<br> $row[item_name] <br> $row[item_date] <br> $row[item_price]<br>";
+			echo "<h2>$row[item_name]</h2> <p>$row[item_date]</p><span>$row[item_price]</span><br><br>";
 
 //differentiate admin & users
 		if (isset($_SESSION['user']) && ($_SESSION['user']['user_type'] == 1)){
 			$hrefedit = "edititem.php?edit=" .$row['item_id'];
-			echo "$hrefedit";
+//			echo "$hrefedit";
 			echo '<a href="' .$hrefedit. '">Edit</a><br>';
-			echo "<br>$row[item_id]<br>";
+//			echo "<br>$row[item_id]<br>";
 			$deletelink = "shop.php?delete=" .$row['item_id'];
-			echo "$deletelink";
+//			echo "$deletelink";
 			echo '<a href="' .$deletelink. '">Delete</a><br>';
 		}
 		else if(isset($_SESSION['user']) && ($_SESSION['user']['user_type'] == 0)) {
 			$buylink = "shop.php?buy=" .$row['item_id'];
-			echo "$buylink";
+//			echo "$buylink";
 			echo '<a href="' .$buylink. '">Buy</a><br>';	
 		}
 
@@ -93,7 +93,7 @@ $noget = $_GET["edit"];
 	$uploaderrors  = array();
 	$check = getimagesize($_FILES["itemimg"]["tmp_name"]);
 	if($check !== false) {
-		echo "File is an image - " . $check["mime"] . ".";
+//		echo "File is an image - " . $check["mime"] . ".";
 		$uploadOk = 1;
 	} else {
 		array_push($uploaderrors, "File is not an image");
@@ -101,9 +101,9 @@ $noget = $_GET["edit"];
 	}
 
 	if ($uploadOk == 0) {
-		echo "Sorry your file was not uploaded!";
+//		echo "Sorry your file was not uploaded!";
 		array_push($uploaderrors, "Sorry, your file was not uploaded.");
-		print_r($uploaderrors);
+//		print_r($uploaderrors);
 	}
 // if everything is ok, try to upload file
 	else {
@@ -136,17 +136,34 @@ $noget = $_GET["edit"];
 
 	function buyitem(){
 		global $db;
-		var_dump($_SESSION);
+//		var_dump($_SESSION);
+		$query = "SELECT * FROM moeshop WHERE item_id = " .$_GET['buy'];
+//		echo "$query <br>";
+		$result = mysqli_query($db, $query);
+		$row = mysqli_fetch_assoc($result);
 		if(isset($_SESSION['user'])){
 			$topupid = $_SESSION['user']['id'];
-			echo $topupid;
+//			echo $topupid;
 		}
-		$topupquery = 'CALL buyitem(' .$topupid. ',' .$_GET['buy']. ');';
+
+		if ($_SESSION['user']['money'] >= $row["item_price"]){
+			echo '<script type="text/javascript">';
+		echo 'if (confirm("Are you sure to buy this item?")) {';
+			$topupquery = 'CALL buyitem(' .$topupid. ',' .$_GET['buy']. ');';
 			mysqli_query($db, $topupquery);
+		echo '}';
+		echo '</script>';
+		}
+		else {
+			echo '<script type="text/javascript">';
+			echo 'alert("Your money is insufficient!")';
+			echo '</script>';
+//			echo 'Your money is insufficient';
+		}
 
 			$apaseh = getmoneynow($topupid);
-			var_dump($apaseh);
-			echo 'ini setelah dipotong BUY ' .$apaseh["money"];
+//			var_dump($apaseh);
+//			echo 'ini setelah dipotong BUY ' .$apaseh["money"];
 			$_SESSION['user']['money'] = $apaseh["money"];
 	}
 
@@ -156,11 +173,12 @@ $noget = $_GET["edit"];
 		echo "$query <br>";
 		$result = mysqli_query($db, $query);
 		$row = mysqli_fetch_assoc($result);
-		var_dump($row);
+//		var_dump($row);
 
 		echo "item nomor $noget";
+		if (isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 1) {
 		echo '<div class="moekana-row">
-			<div class="moekana-column" style="background-color: limegreen; flex: 60%;">';
+			<div class="moekana-column" style="flex: 60%;">';
 			echo '<form method="POST" action="edititem.php?edit=' .$noget. '" method="POST" enctype="multipart/form-data">';
 			echo '<input onchange="readURL(this);" type="file" name="editimg" /><br>';
 		echo '<label class="question1">Previous Item Images</label><br>
@@ -168,7 +186,7 @@ $noget = $_GET["edit"];
       <img id="test" src="#" style="width: 40%;padding: 0px 20px;" /><br>
       <input type="submit" name="picedit_btn" value="Edit Images"></div>';
 
-      echo '<div class="moekana-column" style="background-color: red;flex: 40%;">';
+      echo '<div class="moekana-column" style="background-color: #FFCC66; flex: 40%; padding: 20px; border-left: 5px solid #FFA500;">';
       
       
 		echo '<label class="question1">Item Name</label><br>
@@ -178,11 +196,14 @@ $noget = $_GET["edit"];
 		echo '<label class="question1">Item Price</label><br>
 				<input type="number" name="itemprice" value="' .$row["item_price"]. '"><br>
 				<input type="submit" name="itemedit_btn" value="Edit Item">
-				<a href="shop.php">Back to Item Menu</a>
+				<br><br><a href="shop.php">Back to Item Menu</a>
 				</form>
-				<br>
 				</div>
 			</div>';
+		}
+		if (isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 0) {
+			echo '<img src="images/403-error.png">';
+		}
 	}
 
 	function edititemlist(){
@@ -190,13 +211,19 @@ $noget = $_GET["edit"];
 		$editname = mysqli_real_escape_string($db, $_POST["itemname"]);
 		$editdate = mysqli_real_escape_string($db, $_POST["itemdate"]);
 		$editprice = mysqli_real_escape_string($db, $_POST["itemprice"]);
-		echo "$editname $editdate $editprice";
+//		echo "$editname $editdate $editprice";
 		$queryname = 'UPDATE moeshop SET item_name = "' .$editname. '", item_date ="' .$editdate. '", item_price ="' .$editprice. '" WHERE item_id =' .$noget;
-		echo "$queryname";
+//		echo "$queryname";
 		if(mysqli_query($db,$queryname)){
-			echo 'Success';
+			echo '<script type="text/javascript">';
+			echo 'alert("Success in editing item!")';
+			echo '</script>';
 		}
-		else echo 'Failed edit';
+		else {
+			echo '<script type="text/javascript">';
+			echo 'alert("Failed in editing item!")';
+			echo '</script>';
+		}
 	}
 
 	function edititempic(){
@@ -217,14 +244,14 @@ $noget = $_GET["edit"];
 	$uploaderrors  = array();
 	$check = getimagesize($_FILES["editimg"]["tmp_name"]);
 	if($check !== false) {
-		echo "File is an image - " . $check["mime"] . ".";
+//		echo "File is an image - " . $check["mime"] . ".";
 		$uploadOk = 1;
 	} else {
 		array_push($uploaderrors, "File is not an image");
 		$uploadOk = 0;
 	}
 	if ($uploadOk == 0) {
-		echo "Sorry your file was not uploaded!";
+//		echo "Sorry your file was not uploaded!";
 		array_push($uploaderrors, "Sorry, your file was not uploaded.");
 	}
 // if everything is ok, try to upload file
@@ -233,11 +260,11 @@ $noget = $_GET["edit"];
 //			echo "The file ". basename( $_FILES["itemimg"]["name"]). " has been uploaded.";
 			
 			echo '<script type="text/javascript">';
-			echo 'alert("Success in uploading item!")';
+			echo 'alert("Success in updating image!")';
 			echo '</script>';
 		} else {
 			echo '<script type="text/javascript">';
-			echo 'alert("Sorry, failed to upload item!")';
+			echo 'alert("Sorry, failed to update image!")';
 			echo '</script>';
 //			echo "Sorry, there was an error uploading your file.";
 //			echo "target filetempat" .$target_dir. "apa";

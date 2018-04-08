@@ -9,9 +9,15 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/apaseh.css">
+	<link rel="stylesheet" type="text/css" href="css/comingsoon.css">
+	<link rel="stylesheet" type="text/css" href="css/front.css">
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Lato" rel="stylesheet">
 	<title>MoeMoe</title>
 	<link rel="icon" href="images/retrokyuu.ico" type="image/x-icon">
 	<meta charset="utf-8">
+	<style type="text/css">
+		
+	</style>
 </head>
 <body>
 
@@ -20,12 +26,12 @@
 	?>
 
 	<div class="shop">
-		<div class="shop-header">
+		<div class="shop-header" style="text-align: center;">
 			<img src="images/shopheader.jpg"><br>
 			<?php 
 			if (isset($_SESSION['user']) && ($_SESSION['user']['user_type'] == 1)){
 				$hrefadd = "createitem.php";
-			echo '<a href="' .$hrefadd. '">Add Item</a><br>';
+			echo '<br><br><a href="' .$hrefadd. '" class="btnedit">Add Item</a><br>';
 		}
 			?>
 		</div>

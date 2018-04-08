@@ -8,7 +8,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
-	<!--link rel="stylesheet" type="text/css" href="css/apaseh.css"-->
+	<link rel="stylesheet" type="text/css" href="css/apaseh.css">
 	<title>MoeMoe</title>
 	<link rel="icon" href="images/retrokyuu.ico" type="image/x-icon">
 	<meta charset="utf-8">
@@ -26,11 +26,6 @@
 					<th>MangaKoma</th>
 					<th>Picture</th>
 				</th>
-				<tr>
-					<td>Identity</td>
-					<td>MangaKoma</td>
-					<td>Picture</td>
-				</tr>
 				<?php
 					tablemangaideas();
 				?>

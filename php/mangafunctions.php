@@ -6,8 +6,10 @@ if (!$db){
 }
 
 if (isset($_POST['submit_manga'])&&isset($_SESSION['user'])) {
-	submitideas();
-	submitimg();
+	if(submitimg()){
+		submitideas();
+		header("location: moemanga.php");
+	}
 //		header("location: gallery.html");
 }
 else if (isset($_POST['submit_manga']) && (!isset($_SESSION['user']))){
@@ -60,7 +62,7 @@ function submitimg(){
 	$uploaderrors  = array();
 	$check = getimagesize($_FILES["komaimg"]["tmp_name"]);
 	if($check !== false) {
-		echo "File is an image - " . $check["mime"] . ".";
+//		echo "File is an image - " . $check["mime"] . ".";
 		$uploadOk = 1;
 	} else {
 		array_push($uploaderrors, "File is not an image");
@@ -68,7 +70,7 @@ function submitimg(){
 	}
     //check file size
 	if ($_FILES["komaimg"]["size"] > 2000000) {
-		echo "Your file is too large";
+//		echo "Your file is too large";
 		array_push($uploaderrors, "Sorry, your file is too large.") ;
 		$uploadOk = 0;
 	}
@@ -80,13 +82,14 @@ function submitimg(){
 		$uploadOk = 1;
 	}
 	else {
-		echo "Sorry, only JPG, JPEG, PNG, GIF are allowed";
+//		echo "Sorry, only JPG, JPEG, PNG, GIF are allowed";
+		array_push($uploaderrors, "Sorry, only JPG, JPEG, PNG, GIF are allowed");
 		$uploadOk = 0;
 	}
-	var_dump($_FILES);
+//	var_dump($_FILES);
     // Check if $uploadOk is set to 0 by an error
 	if ($uploadOk == 0) {
-		echo "Sorry your file was not uploaded!";
+//		echo "Sorry your file was not uploaded!";
 		array_push($uploaderrors, "Sorry, your file was not uploaded.");
 //    	echo '<script type="text/javascript">';
 //    	echo 'alert(' .$uploaderrors. ')';
@@ -96,14 +99,18 @@ function submitimg(){
 // if everything is ok, try to upload file
 	else {
 		if (move_uploaded_file($_FILES["komaimg"]["tmp_name"], "mangaideas/".$_FILES["komaimg"]["name"])) {
-			echo "The file ". basename( $_FILES["komaimg"]["name"]). " has been uploaded.";
+//			echo "The file ". basename( $_FILES["komaimg"]["name"]). " has been uploaded.";
 			
 			echo '<script type="text/javascript">';
 			echo 'alert("File has been uploaded!")';
 			echo '</script>';
+			return true;
 		} else {
-			echo "Sorry, there was an error uploading your file.";
-			echo "target filetempat" .$target_dir. "apa";
+			echo '<script type="text/javascript">';
+			echo 'alert("Sorry, there was an error uploading your file!")';
+			echo '</script>';
+//			echo "target filetempat" .$target_dir. "apa";
+			return false;
 		}
 		
 	}
@@ -119,8 +126,8 @@ function tablemangaideas(){
 			echo '<td>Title Koma: ' .$row['titlekoma']. '</td>';
 //			echo '</tr>';
 //			echo '<tr>';
-			echo '<td rowspan="5" style="background-color: yellow;">';
-			echo '<img src="' .$row['komaimgpath']. '" width="25%;"><br><a href="download.php?download=' .$row['komaimgpath']. '">Download Image</a></td>';
+			echo '<td rowspan="5">';
+			echo '<img src="' .$row['komaimgpath']. '" width="50%;"><br><a href="download.php?download=' .$row['komaimgpath']. '">Download Image</a></td>';
 			echo '</tr>';
 			echo '<tr>';
 			echo '<td>Pen Name: ' .$row['fullname']. '</td>';

@@ -2,40 +2,55 @@
 	include('php/rfunctions.php');
 	include('php/navigation.php');
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
-	<link rel="stylesheet" type="text/css" href="css/moekana.css">
-	<link href="https://fonts.googleapis.com/css?family=Handlee|Merienda+One|Fredericka+the+Great" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/comingsoon.css">
+	<link rel="stylesheet" type="text/css" href="css/article.css">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Bad+Script|Poiret+One|Raleway|Nanum+Pen+Script" rel="stylesheet">
 	<title>MoeMoe</title>
 	<link rel="icon" href="images/retrokyuu.ico" type="image/x-icon">
 </head>
 <body>
 
-	<?php
+<?php
 			callnavigation();
 		?>
 
-<div class="container">
-	<div class="moekana-row">
-		<div class="moekana-column">
-			<a href="moekanafirst.php"><img src="http://images.dannychoo.com/cgm/images/post/20140416/27184/182961/large/2c7988c7ce70c08685e049c227047998.jpg" class="moekana-images"></a>
-			<div class="center text-left">
-				<div class="text"><a href="moekanafirst.php">First <br>Edition</a></div>
-			</div>
-
+	<div class="count-bgimg">
+		<div class="count-top">
+			<h1>Coming Soon</h1>
+			<p style="text-align: center;">Get notified when we opened our shop<br>and get free gift as first customer! &#127873;</p>
 		</div>
-		<div class="moekana-column">
-			<a href="moekanasecond.php"><img src="http://images.dannychoo.com/cgm/images/post/20140416/27184/182957/large/e28580f887164e414c3658b87ca18d7c.jpg"
-			class="moekana-images"></a>
-			<div class="center text-right">
-				<div class="text"><a href="moekanasecond.php">Second <br>Edition</a></div>
+		<div id="count-timer">
+			<div class="timer">
+				<span class="days"></span>
+				<div class="timer-text">Days</div>
 			</div>
+			<div class="timer">
+				<span class="hours"></span>
+				<div class="timer-text">Hours</div>
+			</div>
+			<div class="timer">
+				<span class="minutes"></span>
+				<div class="timer-text">Minutes</div>
+			</div>
+			<div class="timer">
+				<span class="seconds"></span>
+				<div class="timer-text">Seconds</div>
+			</div>
+		</div>
+		<div class="count-sub">
+			<!--div class="sub-email"></div>
+			<div class="sub-button"></div-->
+			<input type="email" name="mail" placeholder="&#9993;">
+			<input type="submit" value="Notify Me!">
 		</div>
 	</div>
-</div>
+	
 	<div class="gifchara">
 		<a href="characters.html" id="mirai"></a>
 		<a href="characters.html" id="haruka"></a>
@@ -45,7 +60,7 @@
 		<a href="characters.html" id="eiji"></a>
 		<a href="characters.html" id="retrokyuu"></a>
 	</div>
-	
+	<script type="text/javascript" src="js/comingsoon.js"></script>
 </body>
 
 <footer>

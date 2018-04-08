@@ -35,7 +35,7 @@
 	?>
 
 	<div class="shop">
-		<div class="shop-header">
+		<div class="shop-header" style="text-align: center;">
 			<img src="images/shopheader.jpg"><br>
 		</div>
 		<div class="edit-content">

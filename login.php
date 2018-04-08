@@ -1,5 +1,6 @@
 <?php
 	include('php/rfunctions.php');
+	include('php/navigation.php');
 ?>
 
 	<!DOCTYPE html>
@@ -16,28 +17,9 @@
 	</head>
 	<body>
 
-		<nav>
-			<ul>
-				<li><img alt="Logo" src="images/logo.jpg" class="logo"></li>
-
-				<li><a href="index.php">Home</a></li>
-				<li class="dropdown">
-					<a href="javascript:void(0)" class="dropbtn active">MoeLearn</a>
-					<div class="dropdown-content">
-						<a href="moekana.html">Moekana</a>
-						<a href="moekanji.html">Moekanji</a>
-						<a href="moemanga.html" class="active">Moemanga</a>
-						
-					</div>
-				</li>
-				<li><a href="4koma.html">MoeSensei</a></li>
-				<li><a href="characters.html">Characters</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="shop.html">Shop</a></li>
-				<li style="float:right" hidden><a href="login.html">Login</a></li>
-				<li style="float:right" hidden><a href="register.html">Register</a></li>
-			</ul>
-		</nav>
+		<?php
+			callnavigation();
+		?>
 
 		<div class="loginform">
 			<form method="POST" action="login.php">

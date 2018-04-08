@@ -1,3 +1,8 @@
+<?php
+	include('php/rfunctions.php');
+	include('php/navigation.php');
+?>
+
 <!DOCTYPE html>
 	<html>
 	<head>
@@ -13,7 +18,6 @@
 	<body>
 
 		<?php
-			include ('php/navigation.php');
 			callnavigation();
 		?>
 

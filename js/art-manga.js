@@ -1,11 +1,5 @@
 var modal = document.getElementById('myModal');
 
-//direct admin to manga submission
-document.getElementById("adminBtn").onclick = function(){
-	window.location.href = "mangasubmit.php";
-}
-
-
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 

@@ -96,7 +96,6 @@ echo '<a href="' .$mangasubmit. '"><button class="button" id = "adminBtn" style=
     <div class="modal-header">
       <span class="close">&times;</span>
       <p class="form-title">Submit your 4koma Ideas</p>
-      <?php var_dump($_SESSION); ?>
     </div>
     <div class="modal-body">
     	<form class="animate" action="moemanga.php" method="POST" enctype="multipart/form-data">
@@ -169,7 +168,7 @@ echo '<a href="' .$mangasubmit. '"><button class="button" id = "adminBtn" style=
 				<textarea id="fourthkoma" name="fourthkoma"></textarea><br>
 
 				<label class="question1">Remarks</label><br>
-				<label class="question2">If you have images that help illustrate your idea, you can include it here. (limit to 2MB with file extension .jpg, .png, .gif, and .bmp)</label><br>
+				<label class="question2">If you have to include images that help illustrate your idea. (limit to 2MB with file extension .jpg, .png, .gif, and .bmp)</label><br>
 				<input type="file" name="komaimg"><br><br>
 <!--
 						<input type="reset" value="&#8634; Reset">
