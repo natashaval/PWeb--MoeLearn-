@@ -1,0 +1,35 @@
+.wut-row {
+  display: flex;
+  width: 100%;
+}
+
+.wut-column {
+  flex: 50%;
+  height: auto;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+
+.shop-content {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: beige;
+}
+
+.shop-content > div {
+	background-color: green;
+	margin: 2px;
+}
+
+.shop-content img {
+	border: 3px solid red;
+	width: 200px;
+	height: 250px;
+}
+
+p{
+	color: blue;
+	font-size: 30px;
+}
+

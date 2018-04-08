@@ -5,31 +5,14 @@
 	<link rel="stylesheet" type="text/css" href="css/front.css">
 	<title>MoeMoe</title>
 	<link rel="icon" href="images/retrokyuu.ico" type="image/x-icon">
+	<meta charset="utf-8">
 </head>
 <body>
 
-	<nav>
-		<ul>
-			<li><img alt="Logo" src="images/moekanalogo.png" class="logo"></li>
-
-			<li><a href="index.html" class="active">Home</a></li>
-			<li class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn">MoeLearn  &#9662</a>
-				<div class="dropdown-content">
-					<a href="moekana.html">Moekana</a>
-					<a href="moekanji.html">Moekanji</a>
-					<a href="moemanga.html">Moemanga</a>
-					<a href="moeplay.html">MoePlay! &hearts;</a>
-				</div>
-			</li>
-			<li><a href="4koma.html">MoeSensei</a></li>
-			<li><a href="characters.html">Characters</a></li>
-			<li><a href="gallery.html">Gallery</a></li>
-			<li hidden><a href="shop.html">Shop</a></li>
-			<li style="float:right" hidden><a href="login.html">Login</a></li>
-			<li style="float:right" hidden><a href="register.html">Register</a></li>
-		</ul>
-	</nav>
+	<?php
+		include ('php/navigation.php');
+		callnavigation();
+	?>
 
 	<h3>Dropdown Menu inside a Navigation Bar</h3>
 	<p>Hover over the "Dropdown" link to see the dropdown menu.</p>

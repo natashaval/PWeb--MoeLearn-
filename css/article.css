@@ -1,0 +1,358 @@
+
+.article .article-product {
+  color: darkorange;
+}
+
+/*images slider below*/
+.article-slide {
+ width: 600px;
+ height: 420px;
+ margin-left: auto;
+ margin-right: auto;
+ overflow: hidden;
+}
+.image-holder
+{
+  width: 3500px;
+  background-color: red;
+  height: 400px;
+  clear: both;
+  position: relative;
+  transition: left 2s;
+}
+.slider-image {
+  object-fit: cover;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  width: 600px;
+  height: 400px;
+  position: relative;
+
+}
+.button-holder {
+ margin-left: 40%;
+ z-index: 1;
+}
+.slider-change
+{
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: #E65C00;
+}
+#slider-image-1:target ~ .image-holder
+{
+  left: 0px;
+}
+
+#slider-image-2:target ~ .image-holder
+{
+  left: -600px;
+}
+
+#slider-image-3:target ~ .image-holder
+{
+  left: -1200px;
+}
+
+#slider-image-4:target ~ .image-holder
+{
+  left: -1800px;
+}
+
+#slider-image-5:target ~ .image-holder
+{
+  left: -2400px;
+}
+
+/*Video*/
+video {
+  width: 640px;
+  height: 360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*css for article*/
+.article {
+  margin: 0px 10%;
+}
+
+p.article-title {
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 40px;
+  font-weight: 800;
+  color: #FFA500;
+  text-align: center;
+  text-transform: lowercase;
+}
+p.article-sub {
+  font-family: 'Bad Script', cursive;
+  font-size: 30px;
+  background-color: #ffcc66;
+  text-transform: capitalize;
+  border-radius: 10px;
+  padding: 0px 0px 0px 5px;
+}
+
+p, blockquote {
+  text-align: justify;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.article img {
+  max-width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article li, .article-product, .article a, strong {
+  text-align: justify;
+  font-family: 'Raleway', sans-serif;
+}
+
+.article a {
+  color: #FF8C00;
+}
+
+.article li {
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #FFA500;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 40%; 
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-family: 'Poiret One', cursive;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+blockquote {
+  display: block;
+  border-left: 6px solid #FFA31A;
+  background-color: #F2F2F2;
+  padding: 5px 10px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 5%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatezoom;
+  animation-duration: 0.6s
+}
+
+@media screen and (max-width: 500px) {
+  .modal-content {
+    width: 90%;
+    margin: 0;
+  }
+  .question1, .question2 {
+    width: 100%;
+  }
+}
+
+/* Add Animation */
+
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0px 20px 0px 0px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 1px 10px;
+  background-color: #FFAC30;
+  color: white;
+}
+
+.modal-body {padding: 5px 0px;}
+
+.modal-footer {
+  padding: 5px 16px;
+  color: white;
+  float: right;
+}
+
+form {
+  width: 200%;
+  display: flex;
+  overflow: hidden;
+}
+
+.first, .second {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.btn {
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 0px 5px;
+
+}
+
+.warning {
+  border-color: #FF9800;
+  color: orange;
+}
+
+.warning:hover {
+  background-color: #FF9800;
+  color: white;
+}
+
+fieldset {
+  padding: 5px 10px;
+  border: 2px solid #FFA31A;
+}
+
+.question1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: #FF9900;
+}
+
+.question2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.875em;
+}
+
+.form-title, legend {
+  font-family: 'Bad Script', cursive;
+}
+
+.form-title {
+  font-size: 1.5em;
+  font-weight: 800;
+  text-align: center;
+}
+
+legend {
+  font-size: 1.25em;
+}
+
+textarea {
+  width: 90%;
+}
+input[type=text], input[type=url], input[type=email]{
+  width: 50%;
+  border: none;
+  border-bottom: 1px solid;
+  font-family: sans-serif;
+}
+
+input[type=radio], input[type=checkbox] {
+  font-family: 'Raleway', sans-serif;
+}
+
+input[type=submit], input[type=reset] {
+  padding: 2px 10px;
+  font-size: 1.5em;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #FFAC30;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin: 10px;
+}
+
+input[type=submit]:hover {background-color: #e68a00}
+input[type=reset] {
+  background-color: #80dfff;
+  font-size: 0.75em;
+}
+input[type=reset]{
+  background-color: #00bfff;
+}
+
+input[type=submit]:active {
+  background-color: #e68a00;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

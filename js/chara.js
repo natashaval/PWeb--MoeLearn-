@@ -19,7 +19,7 @@ for (var j=1;j<=7;j++){
 		$('#characters-'+e.data.idx).fadeIn(4000);
 		$(this).parent().css({"border-style": "inset","opacity":"1"});
 		$('.container-profile').hover(
-			function(){$('.profile-active').slideDown();},
+			function(){$('.profile-active').slideDown(1200);},
 			function(){$('.profile-active').slideUp();}
 			);
 	});

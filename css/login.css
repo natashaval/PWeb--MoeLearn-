@@ -1,0 +1,53 @@
+.loginform {
+	background-image: url('http://images.dannychoo.com/cgm/images/post/20160205/27339/187744/original/333b31c88985b5a7641b01a2d7ba43f0.JPG');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.topupform {
+	background-image: url('http://images.dannychoo.com/cgm/images/post/20141231/27256/185319/original/d5fad1ae67cb9704116e74fe3bb2ec01.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+form {
+	width: 50%;
+	margin: 10px auto 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: rgba(253, 253, 253, 0.95);
+	border: 2px solid #FFA31A;
+}
+form > div {
+	width: 100%;
+	margin: 0 0 20px 10%;
+}
+input[type=text], input[type=password], input[type=email] {
+	width: 80%;
+	height: 2em;
+	border: none;
+	border-bottom: 1px solid;
+	font-family: sans-serif;
+	font-size: 12pt;
+	background-color: rgba(253, 253, 253, 0.1);
+}
+input[type=submit]{
+	width: 80%;
+	margin: 0;
+}
+.login-top {
+	margin: 0;
+	background-color: #FFC266;
+}
+.login-img {
+	text-align: center;
+	margin: 10px;
+}
+.login-bottom a {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	color: #FF8C00;
+}
+.button {
+	margin-left: none;
+}

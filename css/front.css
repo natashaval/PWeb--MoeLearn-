@@ -1,5 +1,74 @@
 p {
-	font-family: Georgia;
+	font-family: 'Lato', sans-serif;
 	text-align: justify;
-	text-transform: capitalize;
+}
+
+.homepage {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	padding: 20px;
+	position: relative;
+}
+
+.home1 {
+	text-align: center;
+}
+
+.home-image {
+	flex: 20%;
+}
+
+.home-par {
+	flex: 80%;
+}
+
+.learn {
+	flex: 25%;
+	padding: 10px 10px;
+	margin: 0px 10px;
+	text-align: center;
+	border-radius: 10px;
+	cursor: pointer;
+	border-top: 5px solid #FF9900;
+	border-bottom: 5px solid #FF9900;
+}
+
+.learn p{
+	text-align: center;
+}
+
+.learn a {
+	text-decoration: none;
+	color: black;
+}
+
+.learn:hover {
+	box-shadow: 5px 10px 10px #888888;
+}
+
+.home4 p {
+	text-align: right;
+}
+
+.home4 img, .home5 img, .home6 img, .home7 img{
+	
+	border-radius: 8px;
+	margin: 20px 10px 10px 10px;
+	border: 4px inset #FFAD33;
+}
+
+h2, h3 {
+	font-family: 'Caveat Brush', cursive;
+}
+
+h2 {
+	font-size: 30px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 24px;
+	color: #FF9900;
 }

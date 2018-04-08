@@ -1,55 +1,68 @@
+<?php
+	include ('php/navigation.php');
+	include ('php/rfunctions.php');
+	include('php/shopfunctions.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
-	<link rel="stylesheet" type="text/css" href="css/moekana.css">
-	<link href="https://fonts.googleapis.com/css?family=Handlee|Merienda+One|Fredericka+the+Great" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/gallery.css">
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<title>MoeMoe</title>
 	<link rel="icon" href="images/retrokyuu.ico" type="image/x-icon">
+
+	<script type="text/javascript">
+		//https://khantmontu.blogspot.co.id/2012/08/display-image-preview-before-it-upload.html
+   function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+        $('#test').attr('src', e.target.result);
+       }
+        reader.readAsDataURL(input.files[0]);
+       }
+    }
+</script>
+
 </head>
 <body>
 
-	<nav>
-		<ul>
-			<li><img alt="Logo" src="images/logo.jpg" class="logo"></li>
+	<?php
+		callnavigation();
+	?>
 
-			<li><a href="index.html">Home</a></li>
-			<li class="dropdown">
-				<a href="javascript:void(0)" class="dropbtn active">MoeLearn</a>
-				<div class="dropdown-content">
-					<a href="moekana.html" class="active">Moekana</a>
-					<a href="moekanji.html">Moekanji</a>
-					<a href="moemanga.html">Moemanga</a>
+	<div class="shop">
+		<div class="shop-header">
+			<img src="images/shopheader.jpg"><br>
+		</div>
+		<div class="shop-content">
+			<form method="POST" action="createitem.php" method="POST" enctype="multipart/form-data">
+				<div class="login-top">
+					<p class="form-title">Add Item</p>
 				</div>
-			</li>
-			<li><a href="4koma.html">MoeSensei</a></li>
-			<li><a href="characters.html">Characters</a></li>
-			<li><a href="gallery.html">Gallery</a></li>
-			<li><a href="shop.html">Shop</a></li>
-			<li style="float:right" hidden><a href="login.html">Login</a></li>
-			<li style="float:right" hidden><a href="register.html">Register</a></li>
-		</ul>
-	</nav>
-
-<div class="container">
-	<div class="moekana-row">
-		<div class="moekana-column">
-			<a href="moekanafirst.html"><img src="http://images.dannychoo.com/cgm/images/post/20140416/27184/182961/large/2c7988c7ce70c08685e049c227047998.jpg" class="moekana-images"></a>
-			<div class="center text-left">
-				<div class="text"><a href="moekanafirst.html">First <br>Edition</a></div>
+				<div class="login-content">
+					<input onchange="readURL(this);" type="file" name="itemimg" /><br>
+      <img id="test" src="#" style="width: 20%;" /><br>
+					<label class="question1">Item Name</label><br>
+				<input type="text" name="itemname"><br>
+				<label class="question1">Item Release Date</label><br>
+				<input type="date" name="itemdate"><br>
+				<br>
+				<label class="question1">Item Price</label><br>
+				<input type="number" name="itemprice"><br>
+				<br>
+				</div>
+				<div class="login-bottom">
+					<input type="submit" name="itemadd_btn" value="Add Item">
+					<a href="shop.php">Back to Item Menu</a>
+				</div>
+			</form>
 			</div>
-
-		</div>
-		<div class="moekana-column">
-			<a href="moekanasecond.html"><img src="http://images.dannychoo.com/cgm/images/post/20140416/27184/182957/large/e28580f887164e414c3658b87ca18d7c.jpg"
-			class="moekana-images"></a>
-			<div class="center text-right">
-				<div class="text"><a href="moekanasecond.html">Second <br>Edition</a></div>
-			</div>
-		</div>
 	</div>
-</div>
+
+
 	<div class="gifchara">
 		<a href="characters.html" id="mirai"></a>
 		<a href="characters.html" id="haruka"></a>
@@ -59,7 +72,7 @@
 		<a href="characters.html" id="eiji"></a>
 		<a href="characters.html" id="retrokyuu"></a>
 	</div>
-	
+	<script type="text/javascript" src="js/gallery.js"></script>
 </body>
 
 <footer>

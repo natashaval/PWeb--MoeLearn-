@@ -1,0 +1,90 @@
+/*Menu 4 Wallpaper*/
+.menu-choice {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 2em;
+}
+
+.menu-choice > div {
+	  width: 280px;
+	  height: 450px;
+	  text-align: center;
+}
+
+.menu-choice img {
+	width: 280px;
+	height: 450px;
+	object-fit: cover;
+	border: 10px solid #ddd;
+	border-radius: 7%;
+	box-shadow: 4px 4px 8px #777;
+	cursor: pointer;
+}
+
+figcaption {
+	font-size: 20px;
+}
+
+.menu-choice div:nth-child(odd){
+	transform: rotate(-3deg);
+}
+
+
+.menu-choice div:nth-child(even){
+	transform: rotate(3deg);
+}
+
+.menu-choice div:hover {
+	transition: transform 1s ease;
+	transform: scale(1,1);
+}
+
+/*Wallpaper Tab Img Gallery*/
+.header-wallpaper {
+	display: flex;
+	flex-direction: row;
+}
+.column {
+	width: 25%;
+	padding: 5px;
+}
+
+.column img {
+	width: 100%;
+	margin: 10px;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.column img:hover {
+	opacity: 1;
+}
+
+.header-wallpaper:after {
+	content: "";
+	clear: both;
+}
+
+.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: black;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.content-wallpaper {
+	display: none;
+	position: relative;
+}
+
+#back {
+	width: 8%;
+	float: right;
+	font-size: 40px;
+	padding: 12px 10px;
+	border-radius: 4px;
+	cursor: pointer;
+}

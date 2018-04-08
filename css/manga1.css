@@ -51,9 +51,10 @@ img.header-menu:hover {
 /*manga title moe learning*/
 .manga-title {
 	color: orange;
-	font-size: 20px;
+	font-size: 30px;
 	font-weight: bold;
 	text-align: center;
+	font-family: 'Nanum Pen Script', cursive;
 }
 
 /*manga images 4koma*/
@@ -65,27 +66,30 @@ img.header-menu:hover {
 }
 
 /*unordered list of kanji*/
-.kanji-list {
+.list {
 	list-style: none;
 }
 
-.kanji-list li:before {
+.list li {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.list li:before {
 	content: "▪ ";
 	padding-right: 8px;
 	color: orange;
 }
 
 /*learn more link*/
-.manga-content a:link,.manga-content a:visited {
+.manga-content a:link,.manga-content a:visited{
 	color: white;
 	text-decoration: none;
-	background-color: #FFA500;
-	opacity: 0.8;
+	background-color: rgba(255, 165, 0, 0.6);
 	transition-duration: 0.3s;
 	padding: 12px 10px;
 	border-radius: 4px;
 }
 
 .manga-content a:hover {
-	opacity: 1;
+	background-color: rgba(255, 165, 0, 1);
 }
