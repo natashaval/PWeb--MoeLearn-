@@ -3,7 +3,7 @@ id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 username VARCHAR(100) NOT NULL,
 email VARCHAR(255) NOT NULL,
 PASSWORD VARCHAR(255) NOT NULL,
-money INT,
+money INT DEFAULT 0,
 user_type BOOLEAN);
 
 CREATE TABLE moeshop(
@@ -25,7 +25,7 @@ continent VARCHAR(20),
 web_url VARCHAR(255),
 titlekoma VARCHAR(50) NOT NULL,
 firstkoma VARCHAR(255) NOT NULL,
-secondkoma varhcar(255) NOT NULL,
+secondkoma VARCHAR(255) NOT NULL,
 thirdkoma VARCHAR(255) NOT NULL,
 fourthkoma VARCHAR(255) NOT NULL,
 komaimg MEDIUMBLOB,
