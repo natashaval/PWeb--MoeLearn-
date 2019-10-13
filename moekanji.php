@@ -96,15 +96,7 @@
 	</div>
 
 
-			<div class="gifchara">
-				<a href="characters.html" id="mirai"></a>
-				<a href="characters.html" id="haruka"></a>
-				<a href="characters.html" id="kanata"></a>
-				<a href="characters.html" id="kizuna"></a>
-				<a href="characters.html" id="chitose"></a>
-				<a href="characters.html" id="eiji"></a>
-				<a href="characters.html" id="retrokyuu"></a>
-			</div>
+	<?php callfooter(); ?>
 			<script src="js/article.js"></script>
 		</body>
 

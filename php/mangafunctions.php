@@ -1,8 +1,8 @@
 <?php
-$db = mysqli_connect('localhost', 'root', '', 'moemoe');
+$db = mysqli_connect('localhost', 'root', 'root', 'moemoe');
 
 if (!$db){
-	die("Error: Connection Failed!");
+	die("Error: Connection Failed!MANGA");
 }
 
 if (isset($_POST['submit_manga'])&&isset($_SESSION['user'])) {

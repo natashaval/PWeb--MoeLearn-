@@ -50,5 +50,19 @@
 			
 		echo '</ul>
 	</nav>';
-}
+	}
+
+	function callfooter() {
+		echo '
+		<div class="gifchara">
+		<a href="characters.php" id="mirai"></a>
+		<a href="characters.php" id="haruka"></a>
+		<a href="characters.php" id="kanata"></a>
+		<a href="characters.php" id="kizuna"></a>
+		<a href="characters.php" id="chitose"></a>
+		<a href="characters.php" id="eiji"></a>
+		<a href="characters.php" id="retrokyuu"></a>
+	</div>
+		';
+	}
 ?>
