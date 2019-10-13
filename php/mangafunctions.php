@@ -1,8 +1,9 @@
 <?php
-$db = mysqli_connect('localhost', 'root', 'root', 'moemoe');
+include ('dbconfig.php');
+$db = mysqli_connect($host, $user, $pass, $database);
 
 if (!$db){
-	die("Error: Connection Failed!MANGA");
+	die("Error: Connection Failed! in Manga");
 }
 
 if (isset($_POST['submit_manga'])&&isset($_SESSION['user'])) {

@@ -5,9 +5,10 @@
 	//http://codewithawa.com/posts/admin-and-user-login-in-php-and-mysql-database
 
 	// connect to database
-	$db = mysqli_connect('localhost', 'root', 'root', 'moemoe');
+	include ('dbconfig.php');
+	$db = mysqli_connect($host, $user, $pass, $database);
 	if (!$db){
-		die("Error: Connection Failed!RFUNCTION");
+		die("Error: Connection Failed! in Login");
 	}
 	// variable declaration
 	$username = "";

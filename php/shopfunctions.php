@@ -1,11 +1,11 @@
 <?php
 //readfilefromdatabase: https://stackoverflow.com/questions/20802539/display-data-from-database-into-html-table
 
-	// connect to database
-$db = mysqli_connect('localhost', 'root', 'root', 'moemoe');
+// connect to database
+include ('dbconfig.php');
+$db = mysqli_connect($host, $user, $pass, $database);
 if (!$db){
-		die("Error: Connection Failed!SHOP");
-	}
+		die("Error: Connection Failed! in Shop");	}
 
 //variable get untuk edit
 $noget = $_GET["edit"];	
