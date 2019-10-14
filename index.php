@@ -36,28 +36,28 @@
 			</div>
 			<div class="home3">
 				<div class="learn">
-					<a href="moekanafirst.html">
+					<a href="moekanafirst.php">
 						<img src="http://images.dannychoo.com/cgm/images/post/20120309/26457/141118/large/bdab4d1312811341af99ef79bd6e9275.jpg" alt="moekanafirst">
 						<h3>Moekana First Edition</h3>
 						<p>Learn basic Japanese language by learning Hiragana</p>
 					</a>
 				</div>
 				<div class="learn">
-					<a href="moekanasecond.html">
+					<a href="moekanasecond.php">
 					<img src="http://images.dannychoo.com/cgm/images/post/20120309/26457/141123/large/f5eab92c9800c876cd661d31dca61096.jpg" alt="moekanasecond">
 					<h3>Moekana Second Edition</h3>
 					<p>Complete our first one, add more with Moekana's Second</p>
 				</a>
 				</div>
 				<div class="learn">
-					<a href="moekanji.html">
+					<a href="moekanji.php">
 					<img src="http://images.dannychoo.com/cgm/images/post/20120309/26457/141111/large/f738961d7a34aa6e967a3396ddfd4d6d.jpg" alt="moekanji">
 					<h3>Moekanji</h3>
 					<p>Want to be proficient in lingo, try this one!</p>
 				</a>
 				</div>
 				<div class="learn">
-					<a href="4koma.html">
+					<a href="4koma.php">
 					<img src="http://images.dannychoo.com/cgm/images/post/20120309/26457/141098/large/65e99f93063d10a168a36bc6596d5081.jpg" alt="moemanga">
 					<h3>Moemanga</h3>
 					<p>Prove yourself by reading our manga in Japanese! </p>
@@ -67,7 +67,7 @@
 			<div class="home4">
 				<div class="home-par"><h2>Want to get paid?</h2>
 					<p>After all, what's the meaning of learning without being paid? Submit your own ideas for moemanga, and we will reward you with money to make more</p>
-					<a href="moemanga.html"><button class="button" style="float:right;"><span>Ideas</span></button></a>
+					<a href="moemanga.php"><button class="button" style="float:right;"><span>Ideas</span></button></a>
 				</div>
 				<div class="home-image"><img src="http://images.dannychoo.com/cgm/images/post/20120309/26457/141124/large/2ce1aab5fd880b01e9e4ec0f5e0c63d8.jpg" style="float: right;"></div>
 			</div>
@@ -75,27 +75,19 @@
 				<div class="home-image"><img src="http://images.dannychoo.com/cgm/images/post/20120309/26457/141132/large/f43d0d365154756e1796cf48731f4174.jpg" style="float: left;"></div>
 				<div class="home-par"><h2>Can't get the cuties out of your head?</h2>
 					<p>Have you ever wonder what is Mirai's 3 size? What is Eiji's hobbies? And what kind of weapon Kanata is using? Fill your head even more with their characters and personalities &hearts; </p>
-					<a href="characters.html"><button class="button" style="float: left;margin-left:0; width: 220px;"><span>Characters</span></button></a>
+					<a href="characters.php"><button class="button" style="float: left;margin-left:0; width: 220px;"><span>Characters</span></button></a>
 				</div>
 			</div>
 			<div class="home6">
 				<div class="home-par"><h2>Can't resist yourself?</h2>
 					<p>Had the urge to touch 'n' play with moekana and moekanji right now? Head over to our shop to make your dreams come true &#9733;</p>
-					<a href="shop.html"><button class="button" style="float:right;"><span>Shop</span></button></a>
+					<a href="shop.php"><button class="button" style="float:right;"><span>Shop</span></button></a>
 				</div>
 				<div class="home-image"><img src="http://images.dannychoo.com/cgm/images/post/20120309/26457/141114/large/ac66a37d6eb4f4ba78397a80746dd47b.jpg" style="float: right;"></div>
 			</div>
 			</div>
 		</div>
-		<div class="gifchara">
-			<a href="characters.html" id="mirai"></a>
-			<a href="characters.html" id="haruka"></a>
-			<a href="characters.html" id="kanata"></a>
-			<a href="characters.html" id="kizuna"></a>
-			<a href="characters.html" id="chitose"></a>
-			<a href="characters.html" id="eiji"></a>
-			<a href="characters.html" id="retrokyuu"></a>
-		</div>
+		<?php callfooter(); ?>
 
 	<script type="text/javascript">
 		for (var i=1;i<=7;i++){

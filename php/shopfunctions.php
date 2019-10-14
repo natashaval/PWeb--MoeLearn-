@@ -3,7 +3,7 @@
 
 // connect to database
 include ('dbconfig.php');
-$db = mysqli_connect($host, $user, $pass, $database);
+$db = mysqli_connect($host, $user, $pass, $database, $port);
 if (!$db){
 		die("Error: Connection Failed! in Shop");	}
 
